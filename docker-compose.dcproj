@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectVersion>2.1</ProjectVersion>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <DockerPublishLocally>False</DockerPublishLocally>
+    <ProjectGuid>46293b75-e038-440e-97a9-a2c928b47d10</ProjectGuid>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
+    <DockerServiceName>web-api-1</DockerServiceName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Configs\dashboard.yml" />
+    <None Include="Configs\datasource.yml" />
+    <None Include="Configs\dotnet-otel-dashboard.json" />
+    <None Include="Configs\grafana.ini" />
+    <None Include="Configs\jaeger-ui.json" />
+    <None Include="Configs\logs-dashboard.json" />
+    <None Include="Configs\loki.yml" />
+    <None Include="Configs\otel-collector-config.yml" />
+    <None Include="Configs\prometheus.yml" />
+    <None Include="docker-compose.override.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </None>
+    <None Include="docker-compose.yml" />
+    <None Include=".dockerignore" />
+  </ItemGroup>
+</Project>
