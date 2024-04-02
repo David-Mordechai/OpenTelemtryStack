@@ -14,3 +14,11 @@ datasources:
     access: proxy
     uid: P8E80F9AEF21F6940
     url: http://loki:3100
+    editable: true
+
+  - name: Jeager
+    type: jaeger
+    access: proxy
+    uid: P8E80F9AEF21F7000
+    url: http://jaeger:16686
+    editable: true

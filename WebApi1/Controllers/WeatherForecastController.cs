@@ -21,7 +21,8 @@ namespace WebApi1.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            _logger.LogInformation("Testing logs...");
+            _logger.LogInformation("Testing information logs...");
+            _logger.LogWarning("Testing warning logs...");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
