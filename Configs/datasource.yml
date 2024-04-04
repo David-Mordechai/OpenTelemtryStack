@@ -47,4 +47,4 @@ datasources:
           spanStartTimeShift: '5m'
           spanEndTimeShift: '-5m'
           customQuery: true
-          query: '{$${__tags}} |="$${__trace.traceId}"'
+          query: '{job=~ ".+"} |="$${__trace.traceId}"'
